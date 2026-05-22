@@ -386,14 +386,24 @@ h3 {
   cursor: pointer;
 }
 
+.qr-image,
 .qr-placeholder {
-  display: grid;
   width: min(260px, 100%);
   aspect-ratio: 1;
-  place-items: center;
   margin: 0 auto 18px;
-  border: 1px dashed rgba(12, 111, 180, 0.55);
   border-radius: 8px;
+}
+
+.qr-image {
+  display: block;
+  object-fit: contain;
+  background: var(--white);
+}
+
+.qr-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(12, 111, 180, 0.55);
   color: var(--blue);
   background: rgba(12, 111, 180, 0.06);
   font-weight: 800;
